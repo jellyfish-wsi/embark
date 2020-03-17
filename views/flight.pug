@@ -2,8 +2,20 @@ extends layout
 
 block content
   h1 Welcome to #{title}
-  if async_data != null
-    each flight in async_data
-      p Flight #{flight.number} is operated by #{flight.airline.name}
-  else  
-    p The information entered does not match any flight
+  form#flight-information(action='http://localhost:3000/flight' method='POST')
+    label(for='flight-number') Flight Number
+    input#flight-number(type='text' name='flightNumber' required='' placeholder="UA 247")
+    label(for='departure-date') Departure Date
+    input#departure-date(type='date' name='depDate' value='' min='2020-01-01' max='2025-12-31' required='')
+    button#submit-flight(type='submit') Look Up Flight
+
+    //- If async_data is being passed as a variable by indexRouter, parse through it and display it on webpage
+    if async_data
+      each flight in async_data
+        p#flight-heading Flight #{flight.number} is operated by #{flight.airline.name} 
+        p Departure Time is #{flight.departure.scheduledTimeLocal} from #{flight.departure.airport.name}
+        p Arrival Time is #{flight.arrival.scheduledTimeLocal} at #{flight.arrival.airport.name}
+    else  
+      p The information entered does not match any flight
+      
+    script(type='text/javascript' src='/js/script.js')
