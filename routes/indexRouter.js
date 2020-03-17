@@ -12,10 +12,11 @@ router.get('/flight', function(req, res, next) {
 });
 
 router.post('/flight', async function(req, res, next) {
-  let apiPathString = req.body.pathString;
+  let flightNumber = req.body.flightNumber;
+  let departureDate = req.body.depDate;
 
   try {
-      let async_data = await flight.getFlightData(apiPathString);
+      let async_data = await flight.getFlightData(flightNumber, departureDate);
       res.render('flight', {title: 'Flight Information', async_data});
 
     } catch (err) {
