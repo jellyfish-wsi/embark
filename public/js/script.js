@@ -30,3 +30,14 @@ function signOut() {
     console.log('User signed out.');
   });
 }
+
+var flightSubmitBtn = document.querySelector('#submit-flight');
+
+flightSubmitBtn.addEventListener('click', function(e) {
+  let flightNumberVal = document.querySelector('#flight-number').value;
+  let flightNumber = flightNumberVal.replace(' ', '');
+  let depDate = document.querySelector('#departure-date').value;
+
+  let requestString = '/flights/' + flightNumber + '/' + depDate + '?withLocation=false&withAircraftImage=false';
+  console.log(requestString);
+});
