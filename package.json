@@ -1,0 +1,34 @@
+{
+  "name": "beta-jellyfish",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Travel itinerary with Flight API",
+  "scripts": {
+    "start": "node ./bin/www",
+    "dstart": "cross-env DEBUG=beta-jellyfish:* ./bin/www",
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jellyfish-wsi/beta-jellyfish.git"
+  },
+  "keywords": [
+    "flight",
+    "api",
+    "express",
+    "travel"
+  ],
+  "author": "Dasha Day Hisoler, Diana Silvas, Wanmin Zhang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jellyfish-wsi/beta-jellyfish/issues"
+  },
+  "homepage": "https://github.com/jellyfish-wsi/beta-jellyfish#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mysql": "^2.18.1"
+  },
+  "devDependencies": {
+    "mocha": "^7.0.1."
+  }
+}
