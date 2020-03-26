@@ -1,3 +1,3 @@
-# alpha-jellyfish
+# beta-jellyfish
 
-This is the repository for the alpha development of the travel itinerary web application.
+This is the repository for the beta development of the travel itinerary web application.
