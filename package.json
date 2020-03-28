@@ -1,41 +1,42 @@
 {
-  "name": "alpha-jellyfish",
-  "version": "0.0.0",
+  "name": "beta-jellyfish",
+  "version": "0.0.1",
   "private": true,
   "description": "Travel itinerary with Flight API",
   "scripts": {
     "start": "node ./bin/www",
-    "dstart": "cross-env DEBUG=alpha-jellyfish:* ./bin/www",
+    "dstart": "cross-env DEBUG=beta-jellyfish:* ./bin/www",
     "test": "mocha"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dashaday/alpha-jellyfish.git"
+    "url": "git+https://github.com/jellyfish-wsi/beta-jellyfish.git"
   },
   "keywords": [
     "flight",
     "api",
-    "express"
+    "express",
+    "travel"
   ],
   "author": "Dasha Day Hisoler, Diana Silvas, Wanmin Zhang",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/dashaday/alpha-jellyfish/issues"
+    "url": "https://github.com/jellyfish-wsi/beta-jellyfish/issues"
   },
-  "homepage": "https://github.com/dashaday/alpha-jellyfish#readme",
+  "homepage": "https://github.com/jellyfish-wsi/beta-jellyfish#readme",
   "dependencies": {
     "cookie-parser": "~1.4.4",
     "cross-env": "^7.0.2",
     "debug": "~4.1.1",
     "dotenv": "^8.2.0",
-    "express": "~4.17.1",
+    "express": "^4.17.1",
     "http-errors": "~1.7.3",
+    "mysql": "^2.18.1",
     "morgan": "~1.9.1",
     "node-sass-middleware": "0.11.0",
-    "pug": "~2.0.4",
-    "sqlite3": "^4.1.1"
+    "pug": "~2.0.4"
   },
   "devDependencies": {
-    "mocha": "^7.0.1"
+    "mocha": "^7.0.1."
   }
 }
