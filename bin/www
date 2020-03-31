@@ -5,7 +5,7 @@
  */
 
 var app = require('../app');
-var debug = require('debug')('alpha-jellyfish:server');
+var debug = require('debug')('beta-jellyfish:server');
 var http = require('http');
 
 /**
