@@ -25,18 +25,22 @@
   },
   "homepage": "https://github.com/jellyfish-wsi/beta-jellyfish#readme",
   "dependencies": {
+    "connect-ensure-login": "^0.1.1",
     "cookie-parser": "~1.4.4",
     "cross-env": "^7.0.2",
     "debug": "~4.1.1",
     "dotenv": "^8.2.0",
-    "express": "^4.17.1",
+    "express": "~4.17.1",
+    "express-session": "^1.17.0",
     "http-errors": "~1.7.3",
-    "mysql": "^2.18.1",
     "morgan": "~1.9.1",
     "node-sass-middleware": "0.11.0",
-    "pug": "~2.0.4"
+    "passport": "^0.4.1",
+    "passport-google-oauth20": "^2.0.0",
+    "pug": "~2.0.4",
+    "sqlite3": "^4.1.1"
   },
   "devDependencies": {
-    "mocha": "^7.0.1."
+    "mocha": "^7.0.1"
   }
 }
