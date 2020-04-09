@@ -21,8 +21,8 @@ db.serialize(() => {
   let create_table_trip = `CREATE TABLE trips
   ( id INTEGER PRIMARY KEY AUTOINCREMENT,
     name VARCHAR(50),
-    start_date TEXT,
-    return_date TEXT,
+    start_date DATE,
+    return_date DATE,
     transport_mode VARCHAR(50)
   )`;
   db.run(create_table_trip, (err) => {
