@@ -1,16 +1,26 @@
-const sqlite = require('sqlite3').verbose();
+var mysql = require('mysql');
+var connection = mysql.createConnection({
+  host: 'localhost',
+  user: 'root',
+  password: 'password',
+  database: 'db'
+});
 
-function connect(database = 'development.sqlite3') {
-  return new sqlite.Database(database,(err) => {
+connection.connect(function(err) {
   if (err) {
-    console.error(err.message);
-  }
-  else {
-    console.log(`Connected to the database ${database}`);
+    console.log(err);
+  } else {
+    console.log('Connected to database.');
   }
 });
-}
+
+connection.end(function(err) {
+  if (err) {
+    return console.log('Error closing database:' + err.message);
+  }
+  console.log('Closed the database.');
+});
 
 module.exports = {
-  connect
+  connection
 }
