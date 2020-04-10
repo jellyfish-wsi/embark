@@ -1,4 +1,4 @@
-const db = require('./connect.js').connect();
+const db = require('connect.js').connection();
 
 /* TABLE FOR TRIPS */
 
