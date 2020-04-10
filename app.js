@@ -14,6 +14,8 @@ var flightRouter = require('./routes/flightRouter');
 
 var app = express();
 
+var db = require('./db/models');
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
