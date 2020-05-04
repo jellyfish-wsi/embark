@@ -1,13 +1,13 @@
 {
   "development": {
-    "username": "jellyfish",
+    "username": "root",
     "password": "password",
     "database": "db",
     "host": "localhost",
     "dialect": "mysql"
   },
   "test": {
-    "username": "jellyfish",
+    "username": "root",
     "password": null,
     "database": "database_test",
     "host": "127.0.0.1",
@@ -15,7 +15,7 @@
     "operatorsAliases": false
   },
   "production": {
-    "username": "jellyfish",
+    "username": "root",
     "password": null,
     "database": "database_production",
     "host": "127.0.0.1",
