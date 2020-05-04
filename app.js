@@ -1,3 +1,9 @@
+/** @file An ExpressJS app to track your trips and display flight API data.
+ * @author Dasha Day Hisoler, Diana Silvas, Wanmin Zhang
+ */
+
+ 'use strict';
+ 
 require('dotenv').config();
 var createError = require('http-errors');
 var express = require('express');
