@@ -1,22 +1,22 @@
 {
   "development": {
-    "username": "jellyfish",
-    "password": "password",
+    "username": "root",
+    "password": "process.env.DB_PASSWORD",
     "database": "db",
     "host": "localhost",
     "dialect": "mysql"
   },
   "test": {
-    "username": "jellyfish",
-    "password": null,
+    "username": "root",
+    "password": "process.env.DB_PASSWORD",
     "database": "database_test",
     "host": "127.0.0.1",
     "dialect": "mysql",
     "operatorsAliases": false
   },
   "production": {
-    "username": "jellyfish",
-    "password": null,
+    "username": "root",
+    "password": "process.env.DB_PASSWORD",
     "database": "database_production",
     "host": "127.0.0.1",
     "dialect": "mysql",

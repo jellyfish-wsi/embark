@@ -1,8 +1,8 @@
 var mysql = require('mysql');
 var connection = mysql.createConnection({
   host: 'localhost',
-  user: 'jellyfish',
-  password: 'password',
+  user: 'root',
+  password: 'process.env.DB_PASSWORD',
   database: 'db'
 });
 
