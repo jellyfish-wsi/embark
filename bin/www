@@ -5,7 +5,7 @@
  */
 
 var app = require('../app');
-var debug = require('debug')('beta-jellyfish:server');
+var debug = require('debug')('embark:server');
 var http = require('http');
 var models = require('../db/models');
 /**
