@@ -1,3 +1,7 @@
+/** Transportation database module
+* @module db/models/transportation.js
+*/
+
 'use strict';
 module.exports = (sequelize, DataTypes) => {
   const Transportation = sequelize.define('Transportation', {
