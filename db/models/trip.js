@@ -1,3 +1,7 @@
+/** Trip database module
+* @module db/models/trip.js
+*/
+
 'use strict';
 module.exports = (sequelize, DataTypes) => {
   const Trip = sequelize.define('Trip', {

@@ -1,3 +1,7 @@
+/** User database module
+* @module db/models/user.js
+*/
+
 'use strict';
 module.exports = (sequelize, DataTypes) => {
   const User = sequelize.define('User', {
