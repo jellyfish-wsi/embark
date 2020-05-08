@@ -4,8 +4,10 @@
   "private": true,
   "description": "Travel itinerary with Flight API",
   "scripts": {
+    "docs": "rm -rf docs/*; jsdoc -p -c ./jsdoc.conf.json -r ./",
     "start": "node ./bin/www",
     "dstart": "cross-env DEBUG=embark:* ./bin/www",
+    "servedocs": "http-server ./docs",
     "test": "mocha"
   },
   "repository": {
