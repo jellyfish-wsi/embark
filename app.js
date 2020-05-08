@@ -17,27 +17,57 @@
  * OF THIS SOFTWARE.
  */
 
- 'use strict';
+'use strict';
 
+/** Requires dotenv of `dotenv` library.
+* @requires dotenv
+*/
 require('dotenv').config();
+/** Requires http-errors of `http-errors` library.
+* @requires http-errors
+*/
 var createError = require('http-errors');
+/** Requires express of `express` library.
+* @requires express
+*/
 var express = require('express');
+/** Requires path of `path` library.
+* @requires path
+*/
 var path = require('path');
-// No need for cookies right now
-// var cookieParser = require('cookie-parser');
+/** No need for cookies right now
+* var cookieParser = require('cookie-parser');
+*/
+/** Requires morgan of `morgan` library.
+* @requires morgan
+*/
 var logger = require('morgan');
+/** Requires node-sass-middleware of `node-sass-middleware` library.
+* @requires node-sass-middleware
+*/
 var sassMiddleware = require('node-sass-middleware');
+/** Requires passport of `passport` library.
+* @requires passport
+*/
 var passport = require('passport');
 
+/** Requires all three established routers.
+* @requires indexRouter
+* @requires loginRouter
+* @requires flightRouter
+*/
 var indexRouter = require('./routes/indexRouter');
 var loginRouter = require('./routes/loginRouter');
 var flightRouter = require('./routes/flightRouter');
 
 var app = express();
 
+/** Requires models of `models` library.
+* @requires models
+*/
 var db = require('./db/models');
 
-// view engine setup
+/** View engine setup. */
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 
@@ -83,4 +113,7 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
+/** A module that gets express
+* @module
+*/
 module.exports = app;
