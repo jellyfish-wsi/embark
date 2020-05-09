@@ -134,21 +134,25 @@ input[name='Sign In'] {
 
 /* Home stylings */
 
-#home {
+#home,
+#new-trip {
   /* color: white; */
   margin: auto;
   padding: 3em 0;
   width: 60%
 }
 
-#home h1 {
+#home h1,
+#new-trip h1 {
   font-size: 5em;
 }
 
-#create-trip-btn {
+#create-trip-btn,
+#trip-submit {
   background-color: #3a024b;
   border-radius: 2em;
-  color: white ;
+  color: white;
+  cursor: pointer;
   display: inline-block;
   margin-bottom: 2em;
   padding: 0.5em 2em;
@@ -218,4 +222,34 @@ body.disable-scroll {
 
 .overlay-card article {
   margin: 1em 0;
+}
+
+/* Create-new-trip stylings */
+#newtrip-form {
+  margin: 2em 0 0 2em;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+#newtrip-form li {
+  margin-bottom: 1em;
+}
+
+label {
+  display: block;
+  font-size: 0.8em;
+}
+
+#newtrip-form input[type='text'],
+#newtrip-form input[type='date'] {
+  border: 2px solid #3a024a;
+  border-radius: 1em;
+  display: block;
+  padding: 1em;
+  width: 20em;
+}
+
+#trip-submit {
+  margin-top: 2em;
+  width: auto;
 }
