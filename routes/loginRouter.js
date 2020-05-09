@@ -25,7 +25,7 @@ router.get('/google/callback',
   * @desc After a successful authentication, users get redirected home.
   */
   function(req, res) {
-    res.redirect('/flight');
+    res.redirect('/');
   });
 
 /** @desc Logging user out and directing them back to the login page with Google Auth */

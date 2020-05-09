@@ -20,7 +20,7 @@ router.get('/',
   * @function
   */
   function(req, res, next) {
-    res.render('flight', {title: 'Flight Information', user: req.user});
+    res.render('flight', {user: req.user});
   });
 
 router.post('/',
@@ -38,7 +38,7 @@ router.post('/',
     */
     try {
         let async_data = await flight.getFlightData(flightNumber, departureDate);
-        res.render('flight', {title: 'Flight Information', user: req.user, async_data});
+        res.render('flight', {user: req.user, async_data});
 
       } catch (err) {
         res.status(err.response.status)

@@ -1,0 +1,38 @@
+extends layout
+
+block content
+  main#new-trip
+    h1 embark
+    h2 Create New Trip
+    form#newtrip-form(action='/newtrip' method='post')
+      ul
+        li
+          label(for='name') Trip Name
+          input#name(type='text' name='name')
+        li
+          label(for='name') Destination
+          input#destination(type='text' name='destination')
+        li
+          label(for='start-date') Start Date
+          input#start-date(type='date' name='startDate')
+        li
+          label(for='end-date') End Date
+          input#end-date(type='date' name='endDate')
+      ul
+        li
+          label(for='name') Accomodation Name
+          input#accomName(type='text' name='accomName')
+        li
+          label(for='name') Accomodation Address
+          input#accomName(type='text' name='accomAddress')
+        li
+          label(for='mode') Mode of Transportation
+          input#mode(type='text' name='mode')
+        li
+          label(for='name') Flight Number
+          input#flightNumber(type='text' name='flightNumber')
+        li
+          label(for='name') Flight Departure
+          input#flightDeparture(type='date' name='flightDeparture')
+        li
+          input#trip-submit(type='submit' name='submit' value='Submit')

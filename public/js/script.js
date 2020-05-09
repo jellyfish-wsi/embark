@@ -1,41 +1,36 @@
-/** @function */
-function init() {
-  gapi.load('auth2', function() {
-    console.log('inside init');
-    gapi.auth2.init();
-  });
+function toggleCard(overlayItem) {
+  overlayItem.classList.toggle('visible');
+  var page = document.querySelector('body');
+  page.classList.toggle('disable-scroll');
 }
 
-/** A function that gets user data for client-side scripts.
-* @function onSignIn
-*/
-function onSignIn(googleUser) {
-  var profile = googleUser.getBasicProfile();
-  console.log("ID: " + profile.getId()); /** Don't send this directly to your server! */
-  console.log('Full Name: ' + profile.getName());
-  console.log('Given Name: ' + profile.getGivenName());
-  console.log('Family Name: ' + profile.getFamilyName());
-  console.log("Image URL: " + profile.getImageUrl());
-  console.log("Email: " + profile.getEmail());
 
-  /** The ID token you need to pass to your backend: */
-  var id_token = googleUser.getAuthResponse().id_token;
-  console.log("ID Token: " + id_token);
+// if in the home page, run this
+if (document.querySelector('#home')) {
+  console.log("Inside home");
+  var trips = document.querySelectorAll('article.trip');
+  for (let tripItem of trips) {
+    // console.log(tripItem.outerHTML);
+    tripItem.addEventListener('click',function(event) {
+      var overlayItem = event.target.nextElementSibling;
+      console.log(overlayItem);
+      toggleCard(overlayItem);
+    });
+  }
 }
 
-/** A function that displays a failed login if event occurs.
-* @function onFailure
-*/
-function onFailure() {
-  console.error('Sign in has failed!');
-}
-
-/** A function for signing out.
-* @function signOut
-*/
-function signOut() {
-  var auth2 = gapi.auth2.getAuthInstance();
-  auth2.signOut().then(function () {
-    console.log('User signed out.');
+// if the customize-overlay is on display,
+// play this js
+if (document.querySelector('.overlay')) {
+  // var overlay = document.querySelector('.overlay');
+  // if there are any clicks happening on overlay
+  // check if it's from outside the form-card
+  document.addEventListener('click', function(event){
+    // Select the necessary elements from the DOM
+    var areaClicked = event.target;
+    console.log(areaClicked);
+    if (areaClicked.className === 'overlay visible') {
+      toggleCard(areaClicked);
+    }
   });
 }
