@@ -6,31 +6,33 @@ block content
     a#create-trip-btn(href='/newtrip') Create New Trip
     section#upcoming-trips.trip-section
       h2 Upcoming Trips
-      article.trip
-        h3 Boba Trip!
-        h4 Taiwan
-        h4 June 8, 2020 - June 15, 2020
-      section.overlay
-        section.overlay-card
-          h3 Boba Trip!
-          h4 Taiwan
-          h4 June 8, 2020 - June 15, 2020
-          article
-            h3 Accomodations
-            ul
-              li Accomodation Name
-              li Address
-              li Check-in
-              li Check-out
-              li Notes
-          article
-            h3 Transportation
-            ul
-              li Mode
-              li Flight #
-              li Departure Date
-              li Arrival Date
-              li Notes
+      
+      if trips
+        each tripItem in trips
+          article.trip
+            h3 #{tripItem.name}
+            h4 #{tripItem.destination}
+            h4 #{tripItem.start_date} - #{tripItem.end_date}
+          section.overlay
+            section.overlay-card
+              h3 #{tripItem.name}
+              h4 #{tripItem.destination}
+              h4 #{tripItem.start_date} - #{tripItem.end_date}
+              article
+                h3 Accomodations
+                ul
+                  li #{tripItem.acc_name}
+                  li #{tripItem.acc_address}
+              article
+                h3 Transportation
+                ul
+                  li #{tripItem.transport_mode}
+                  li #{tripItem.flight_number}
+                  li #{tripItem.fl_departure} at #{tripItem.fl_dep_city}
+                  li #{tripItem.fl_arrival} at #{tripItem.fl_arr_city}
+      else
+        p There are no trips as of now. Make one!    
+      
     section#past-trips.trip-section
       h2 Past Trips
       article.trip
