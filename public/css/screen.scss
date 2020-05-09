@@ -1,12 +1,133 @@
-html {
-  background-color: #f4f4f4;
-  margin: auto;
-  padding: 2em 0;
-  font-size: 1.125em; /* 18px / 16px = 1.125em */
-  line-height: 1.3em; /* 22px / 18px = 1.222... */
-  width: 80%;
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+/* stylelint-disable */
+/* Keep reset CSS to one minified line */
+a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}html,.reset{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}table{border-collapse:collapse;border-spacing:0}
+/* stylelint-enable */
+
+/* Roboto for Google Sign In Button */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+a {
+  text-decoration: none;
 }
 
-p#flight-heading {
-  font-weight: bold;
+button,
+input[type="submit"] { /* reset button stylings */
+  background-color: inherit;
+  border: none;
+  font-family: inherit; /* For all browsers */
+  font-size: 100%; /* For all browsers */
+  line-height: 1.15; /* For all browsers */
+  margin: 0; /* Firefox and Safari have margin */
+  overflow: visible; /* Edge hides overflow */
+  text-transform: none; /* Firefox inherits text-transform */
+  -webkit-appearance: button; /* Safari otherwise prevents some styles */
+}
+
+h1 {
+  font-size: 2.666667em; /* 48px / 18px  = 3.333em */
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.5em;
+}
+
+h2 {
+  font-size: 2em; /* 36px / 18px  = 2.667em */
+  font-style: normal;
+  font-weight: 900;
+  line-height: 1em;
+}
+
+h3 {
+  font-size: 1.666667em; /* 30px / 18px  = 1.667em */
+  line-height: 1.3em;
+}
+
+h4 {
+  font-size: 1.333333em; /* 24px / 18px  = 1.333em */
+  line-height: 1.3em;
+}
+
+html {
+  background-image: url("/img/std-bg2.jpg");
+  background-size: 100vw;
+  background-repeat: repeat;
+  color: black;
+  font-family: brevia, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.125em; /* 18px / 16px = 1.125em */
+  line-height: 1.3em; /* 22px / 18px = 1.222... */
+}
+
+img {
+  display: block;
+}
+
+/* Login Page */
+
+#login {
+  background-image: url("/img/login-bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  padding: 20vh 5vw 0 20vh;
+}
+
+#welcome-card {
+  background-color: rgba(255, 255, 255, 0.9);
+  border: medium solid #ff7e01;
+  border-radius: 1em;
+  box-shadow: 0 0 0 0.5em rgba(255, 255, 255, 0.9);
+  float: right;
+  padding: 3em;
+  width: 20vw;
+  /* height:50vw; */
+}
+
+#embark-title {
+  display: block;
+  font-size: 1.7em;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 0.5em;
+}
+
+#login-btn {
+  background-color: #ffffff;
+  border: thin solid #ffffff;
+  border-radius: 3px;
+  box-shadow: 1px 1px 5px grey;
+  display: inline-block;
+  margin:auto;
+  width: 10em;
+  padding: 4px 10px 8px 10px;
+}
+
+#login-btn img {
+  display: inline-block;
+  margin-right: 0.6em;
+  vertical-align: bottom;
+  width: 18px;
+}
+
+#login p {
+  margin: 2em 0;
+}
+
+input[name='Sign In'] {
+  background-color: #ffffff;
+  border: none;
+  color: #6f767f;
+  cursor: pointer;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 14px; /* in pixels accdg to Google's specs */
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  text-transform: uppercase;
 }
