@@ -31,7 +31,29 @@ block content
                   li #{tripItem.fl_departure} at #{tripItem.fl_dep_city}
                   li #{tripItem.fl_arrival} at #{tripItem.fl_arr_city}
       else
-        p There are no trips as of now. Make one!    
+        p There are no trips as of now. Make one!
+        
+      article.trip
+        h3 Boba Trip!
+        h4 Taiwan
+        h4 June 8, 2020 - June 15, 2020
+      section.overlay
+        section.overlay-card
+          h3 Boba Trip! This is a static value!
+          h4 Taiwan
+          h4 June 8, 2020 - June 15, 2020
+          article
+            h3 Accomodations
+            ul
+              li Accomodation Name
+              li Address
+          article
+            h3 Transportation
+            ul
+              li Mode
+              li Flight #
+              li Departure Date
+              li Arrival Date
       
     section#past-trips.trip-section
       h2 Past Trips
