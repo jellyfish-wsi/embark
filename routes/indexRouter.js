@@ -8,6 +8,10 @@ var express = require('express');
 * @requires connect-ensure-login
 */
 var connect = require('connect-ensure-login');
+/** Requires models of `models` library.
+* @requires models
+*/
+var models = require('../db/models');
 var router = express.Router();
 
 
@@ -15,7 +19,9 @@ var router = express.Router();
 router.get('/',
   connect.ensureLoggedIn('/auth'),
   function(req, res, next) {
-  res.render('index', { title: 'Travel Itinerary' });
+    models.Trip.findAll().then(trips => {
+      res.render('index', {trips: trips});
+    })
 });
 
 /** A module that connects to express.Router().
