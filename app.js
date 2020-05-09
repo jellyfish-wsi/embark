@@ -55,10 +55,12 @@ var passport = require('passport');
 * @requires indexRouter
 * @requires loginRouter
 * @requires flightRouter
+* @requires tripRouter
 */
 var indexRouter = require('./routes/indexRouter');
 var loginRouter = require('./routes/loginRouter');
 var flightRouter = require('./routes/flightRouter');
+var tripRouter = require('./routes/tripRouter');
 
 var app = express();
 
@@ -96,6 +98,7 @@ app.use(passport.session());
 app.use('/', indexRouter);
 app.use('/auth', loginRouter);
 app.use('/flight', flightRouter);
+app.use('/newtrip', tripRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
