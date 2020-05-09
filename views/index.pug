@@ -1,24 +1,39 @@
 extends layout
 
 block content
-  h1#create-trip Create Trip
-  p#information
-    | Enter your trip information here!
-  form#new-trip-form(action='#null' method='get')
-    label(for='trip-name') Trip Name:
-    input#trip-name(type='text' name='trip-name' required='' placeholder="What's the name of your trip?")
-    br
-    label(for='location') Location:
-    input#location(type='text' name='location' required='' placeholder='Where are you going?')
-    br
-    label(for='trip-start') From:
-    input#trip-start(type='date' name='trip-start' value='' min='2020-01-01' max='2025-12-31' required='')
-    br
-    label(for='trip-end') To:
-    input#trip-end(type='date' name='trip-end' value='' min='2020-01-01' max='2025-12-31')
-    br
-    label(for='Transport-mode') Transport mode:
-    input#trip-mode(type='text' name='Transport-mode' value='' placeholder='What Transportation are you using?' required='')
-    br
-    input#create(type='submit' name='create' value='Create')
-    input#cancel(type='submit' name='cancel' value='Cancel')
+  main#home
+    h1 embark
+    a#create-trip-btn(href='#') Create New Trip
+    section#upcoming-trips.trip-section
+      h2 Upcoming Trips
+      article.trip
+        h3 Boba Trip!
+        h4 Taiwan
+        h4 June 8, 2020 - June 15, 2020
+      section.overlay
+        section.overlay-card
+          h3 Boba Trip!
+          h4 Taiwan
+          h4 June 8, 2020 - June 15, 2020
+          article
+            h3 Accomodations
+            ul
+              li Accomodation Name
+              li Address
+              li Check-in
+              li Check-out
+              li Notes
+          article
+            h3 Transportation
+            ul
+              li Mode
+              li Flight #
+              li Departure Date
+              li Arrival Date
+              li Notes
+    section#past-trips.trip-section
+      h2 Past Trips
+      article.trip
+        h3 Trip Name
+        h4 Destination
+        h4 Date
