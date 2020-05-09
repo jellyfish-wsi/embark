@@ -131,3 +131,91 @@ input[name='Sign In'] {
   text-decoration: none;
   text-transform: uppercase;
 }
+
+/* Home stylings */
+
+#home {
+  /* color: white; */
+  margin: auto;
+  padding: 3em 0;
+  width: 60%
+}
+
+#home h1 {
+  font-size: 5em;
+}
+
+#create-trip-btn {
+  background-color: #3a024b;
+  border-radius: 2em;
+  color: white ;
+  display: inline-block;
+  margin-bottom: 2em;
+  padding: 0.5em 2em;
+}
+
+.trip-section {
+  margin-bottom: 3em;
+}
+
+.trip {
+  border: medium solid #3a024a;
+  border-radius: 1em;
+  cursor: pointer;
+  margin: 1em;
+  padding: 1.2em 1em;
+}
+
+.trip > * {
+  pointer-events: none; /* elements inside .trip are not clickable */
+}
+
+#past-trips .trip {
+  background-color: rgba(78, 9, 154, 0.6);
+  color: white;
+}
+
+#home h4 {
+  font-size: 1em;
+  line-height: 1.3em;
+}
+
+/* disable background scrolling */
+body.disable-scroll {
+  position: inherit;
+  overflow: hidden;
+}
+
+/* card container */
+.overlay {
+  display: none;
+  left: 0;
+  top: 0;
+  overflow-y: scroll;
+  width: 100%;
+  height: 100%;
+  padding: 4em 0;
+  position: fixed;
+  background-color: rgba(65,65,65,0.8);
+}
+
+/* displays section that holds card */
+.overlay.visible {
+  display: block;
+}
+
+/* card */
+.overlay-card {
+  background-color: white;
+  border-radius: 1em;
+  display: block;
+  margin: auto;
+  /* margin-bottom: 8em; */
+  padding: 2em;
+  width: 60%;
+  z-index: 2;
+}
+
+.overlay-card article {
+  margin: 1em 0;
+}
